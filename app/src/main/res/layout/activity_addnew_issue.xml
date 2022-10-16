@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#D8FFFE"
+    android:padding="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_add_newissue"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@color/base_color"
+            android:text="Add New Issue"
+            android:textStyle="bold"
+            android:fontFamily="@font/raleway"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+<!--        card issue name-->
+        <View
+            android:id="@+id/card_newIssue"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/base_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_add_newissue"
+            app:layout_constraintTop_toBottomOf="@+id/txt_add_newissue" />
+
+        <TextView
+            android:id="@+id/txt_newissue"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/card_newIssue"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="New issue name :"
+            android:fontFamily="@font/raleway"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/inpt_issue_name"
+            android:layout_height="30dp"
+            android:layout_width="160dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_newissue"
+            android:background="@drawable/textbox_whiteborder"
+            app:layout_constraintTop_toTopOf="@+id/txt_newissue"
+            app:layout_constraintRight_toRightOf="@+id/card_newIssue"
+            app:layout_constraintLeft_toRightOf="@+id/txt_newissue"/>
+
+        <TextView
+            android:id="@+id/txt_newisue_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway"
+            android:text="Date :"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_newissue" />
+
+        <EditText
+            android:id="@+id/select_dd1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textbox_whiteborder"
+            android:fontFamily="@font/raleway"
+            android:hint="DD"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/inpt_issue_name"
+            app:layout_constraintTop_toBottomOf="@id/inpt_issue_name" />
+
+        <EditText
+            android:id="@+id/select_mm1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/textbox_whiteborder"
+            android:fontFamily="@font/raleway"
+            android:hint="MM"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/select_dd1"
+            app:layout_constraintLeft_toRightOf="@id/select_dd1"
+            app:layout_constraintTop_toTopOf="@id/select_dd1" />
+
+        <EditText
+            android:id="@+id/select_yyyy1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/textbox_whiteborder"
+            android:fontFamily="@font/raleway"
+            android:hint="YYYY"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/select_mm1"
+            app:layout_constraintLeft_toRightOf="@id/select_mm1"
+            app:layout_constraintTop_toTopOf="@id/select_mm1" />
+
+<!--        card symptom-->
+        <View
+            android:id="@+id/card_symptoms"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/base_color"
+            app:layout_constraintEnd_toEndOf="@+id/card_newIssue"
+            app:layout_constraintStart_toStartOf="@+id/card_newIssue"
+            app:layout_constraintTop_toBottomOf="@+id/card_newIssue" />
+
+        <TextView
+            android:id="@+id/txt_symptoms"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Symptoms :"
+            android:fontFamily="@font/raleway"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/card_symptoms"
+            app:layout_constraintLeft_toLeftOf="@+id/card_symptoms"/>
+
+        <EditText
+            android:id="@+id/inpt_symptom"
+            android:layout_width="360dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/textbox_whiteborder"
+            android:hint="Symptoms1"
+            android:padding="2dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/txt_symptoms"
+            app:layout_constraintRight_toRightOf="@+id/card_symptoms"
+            app:layout_constraintTop_toBottomOf="@+id/txt_symptoms" />
+
+        <EditText
+            android:id="@+id/inpt_symptom1"
+            android:layout_width="360dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/textbox_whiteborder"
+            android:hint="Symptoms2"
+            android:padding="2dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/inpt_symptom"
+            app:layout_constraintRight_toRightOf="@+id/inpt_symptom"
+            app:layout_constraintTop_toBottomOf="@+id/inpt_symptom" />
+
+        <Button
+            android:id="@+id/add_new_sym"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/raleway"
+            android:text="Add New Symptom"
+            android:textAllCaps="false"
+            android:textColor="@color/base_color"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/card_symptoms"
+            app:layout_constraintLeft_toLeftOf="@+id/card_symptoms"
+            app:layout_constraintRight_toRightOf="@+id/card_symptoms" />
+
+
+<!--        card treatment-->
+        <View
+            android:id="@+id/card_treatment"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/base_color"
+            app:layout_constraintEnd_toEndOf="@+id/card_newIssue"
+            app:layout_constraintStart_toStartOf="@+id/card_newIssue"
+            app:layout_constraintTop_toBottomOf="@+id/card_symptoms" />
+
+        <TextView
+            android:id="@+id/txt_tratment"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Treatment :"
+            android:fontFamily="@font/raleway"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/card_treatment"
+            app:layout_constraintLeft_toLeftOf="@+id/card_treatment"/>
+
+        <EditText
+            android:id="@+id/inpt_treatment"
+            android:layout_width="360dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/textbox_whiteborder"
+            android:hint="Treatment1"
+            android:padding="2dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/txt_tratment"
+            app:layout_constraintRight_toRightOf="@+id/card_treatment"
+            app:layout_constraintTop_toBottomOf="@+id/txt_tratment" />
+
+        <EditText
+            android:id="@+id/inpt_treatment1"
+            android:layout_width="360dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/textbox_whiteborder"
+            android:hint="Treatment2"
+            android:padding="2dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/inpt_treatment"
+            app:layout_constraintRight_toRightOf="@+id/inpt_treatment"
+            app:layout_constraintTop_toBottomOf="@+id/inpt_treatment" />
+
+        <Button
+            android:id="@+id/add_new_treatment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/raleway"
+            android:text="Add New Treatment"
+            android:textAllCaps="false"
+            android:textColor="@color/base_color"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/card_treatment"
+            app:layout_constraintLeft_toLeftOf="@+id/card_treatment"
+            app:layout_constraintRight_toRightOf="@+id/card_treatment" />
+
+<!--        card test and report-->
+        <View
+            android:id="@+id/card_test_report"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/base_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_treatment" />
+
+        <TextView
+            android:id="@+id/txt_test_report"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Test and Report :"
+            android:fontFamily="@font/raleway"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/card_test_report"
+            app:layout_constraintLeft_toLeftOf="@+id/card_test_report"/>
+
+        <EditText
+            android:id="@+id/inpt_test"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/textbox_whiteborder"
+            android:hint="Test 1"
+            android:padding="2dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintLeft_toLeftOf="@+id/txt_test_report"
+            app:layout_constraintTop_toBottomOf="@+id/txt_test_report" />
+
+        <ImageView
+            android:id="@+id/attch_report"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/report"
+            app:layout_constraintBottom_toTopOf="@+id/attch_report1"
+            app:layout_constraintLeft_toRightOf="@+id/inpt_test"
+            app:layout_constraintRight_toRightOf="@+id/card_test_report"
+            app:layout_constraintTop_toTopOf="@+id/inpt_test" />
+
+        <EditText
+            android:id="@+id/inpt_test1"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/textbox_whiteborder"
+            android:hint="Test 2"
+            android:padding="2dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/inpt_test"
+            app:layout_constraintRight_toRightOf="@+id/inpt_test"
+            app:layout_constraintTop_toBottomOf="@+id/inpt_test" />
+
+        <ImageView
+            android:id="@+id/attch_report1"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:src="@drawable/report"
+            app:layout_constraintLeft_toRightOf="@+id/inpt_test1"
+            app:layout_constraintTop_toTopOf="@+id/inpt_test1"
+            app:layout_constraintBottom_toBottomOf="@+id/inpt_test1"
+            app:layout_constraintRight_toRightOf="@+id/card_test_report"/>
+
+        <Button
+            android:id="@+id/add_new_test_and_reports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/raleway"
+            android:text="Add New Test and Reports"
+            android:textAllCaps="false"
+            android:textColor="@color/base_color"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/card_test_report"
+            app:layout_constraintLeft_toLeftOf="@+id/card_test_report"
+            app:layout_constraintRight_toRightOf="@+id/card_test_report" />
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Save"
+            android:fontFamily="@font/raleway"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/card_test_report"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

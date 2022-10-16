@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/issueDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="#D8FFFE"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/issueName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/base_color"
+        android:fontFamily="@font/raleway"
+        android:gravity="center_horizontal"
+        android:text="COVID-19"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/issueDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/base_color"
+        android:fontFamily="@font/raleway"
+        android:gravity="center_horizontal"
+        android:text="22/09/2020"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/issueName"/>
+
+    <ScrollView
+        android:id="@+id/issuePannel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/issueDate">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/issueCardsHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            //Issue Details
+            <View
+                android:id="@+id/issueDetailsInfo"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_color"
+                app:layout_constraintLeft_toLeftOf="@id/issueCardsHolder"
+                app:layout_constraintRight_toRightOf="@id/issueCardsHolder"
+                app:layout_constraintTop_toTopOf="@+id/issueCardsHolder" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/txt_issue"
+                android:text="Issue Details / Symptoms :"
+                android:textSize="22sp"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/raleway"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/issueDetailsInfo"
+                app:layout_constraintTop_toTopOf="@+id/issueDetailsInfo" />
+
+            <TextView
+                android:id="@+id/sym1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:layout_marginTop="5dp"
+                android:text="1)Couph"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/txt_issue"
+                app:layout_constraintTop_toBottomOf="@+id/txt_issue" />
+
+            <TextView
+                android:id="@+id/sym2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:layout_marginTop="5dp"
+                android:text="2) Body Pain"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/sym1"
+                app:layout_constraintTop_toBottomOf="@+id/sym1" />
+
+            <TextView
+                android:id="@+id/sym3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:layout_marginTop="5dp"
+                android:text="3) Vomiting"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/sym2"
+                app:layout_constraintTop_toBottomOf="@+id/sym2" />
+
+            <TextView
+                android:id="@+id/sym4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:layout_marginTop="5dp"
+                android:text="4) Fever"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/sym3"
+                app:layout_constraintTop_toBottomOf="@+id/sym3" />
+
+            //Issue Treatmaint
+
+            <View
+                android:id="@+id/IssueTreatment"
+                android:layout_width="385dp"
+                android:layout_height="162dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_color"
+                app:layout_constraintLeft_toLeftOf="@id/issueCardsHolder"
+                app:layout_constraintRight_toRightOf="@id/issueCardsHolder"
+                app:layout_constraintTop_toBottomOf="@+id/issueDetailsInfo" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/txt_issueTreatment"
+                android:text="Treatment :"
+                android:textSize="22sp"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/raleway"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/IssueTreatment"
+                app:layout_constraintTop_toTopOf="@+id/IssueTreatment" />
+
+            <TextView
+                android:id="@+id/tre1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:layout_marginTop="5dp"
+                android:text="1) Tab. Paracetamol 500Mg"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/txt_issueTreatment"
+                app:layout_constraintTop_toBottomOf="@+id/txt_issueTreatment" />
+
+            <TextView
+                android:id="@+id/tre2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:layout_marginTop="5dp"
+                android:text="2) Tab.Favivir 500Mg"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/tre1"
+                app:layout_constraintTop_toBottomOf="@+id/tre1" />
+
+            <TextView
+                android:id="@+id/tre3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:layout_marginTop="5dp"
+                android:text="3) Tab.Citrizen 250Mg"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/tre2"
+                app:layout_constraintTop_toBottomOf="@+id/tre2" />
+
+            <TextView
+                android:id="@+id/tre4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:layout_marginTop="5dp"
+                android:text="4) Inj. Remdicivir 100Mg"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/tre3"
+                app:layout_constraintTop_toBottomOf="@+id/tre3" />
+
+            //Under treatment
+            <View
+                android:id="@+id/doctorName"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_color"
+                app:layout_constraintLeft_toLeftOf="@id/issueCardsHolder"
+                app:layout_constraintRight_toRightOf="@id/issueCardsHolder"
+                app:layout_constraintTop_toBottomOf="@+id/IssueTreatment" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/txt_doctor_name"
+                android:text="Under Treatment / Doctor Name :"
+                android:textSize="22sp"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/raleway"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/doctorName"
+                app:layout_constraintTop_toTopOf="@+id/doctorName" />
+
+            <TextView
+                android:id="@+id/dct_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:layout_marginTop="5dp"
+                android:text="Dr. Shantanu Nimbalkar"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/txt_doctor_name"
+                app:layout_constraintTop_toBottomOf="@+id/txt_doctor_name" />
+
+            //Test Reports
+            <View
+                android:id="@+id/testReports"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_color"
+                app:layout_constraintTop_toBottomOf="@+id/doctorName"
+                app:layout_constraintLeft_toLeftOf="@id/issueCardsHolder"
+                app:layout_constraintRight_toRightOf="@id/issueCardsHolder"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/txt_report"
+                android:text="Test and Report :"
+                android:textSize="22sp"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/raleway"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/testReports"
+                app:layout_constraintTop_toTopOf="@+id/testReports" />
+
+
+            <TextView
+                android:id="@+id/test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:layout_marginTop="5dp"
+                android:text="1) CRP TEST"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/txt_report"
+                app:layout_constraintTop_toBottomOf="@+id/txt_report" />
+
+            <ImageView
+                android:layout_height="20dp"
+                android:layout_width="20dp"
+                android:src="@drawable/report"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintLeft_toRightOf="@+id/test"
+                app:layout_constraintTop_toTopOf="@id/test"/>
+
+            <TextView
+                android:id="@+id/test1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:layout_marginTop="5dp"
+                android:text="2) RTPCR TEST"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/test"
+                app:layout_constraintTop_toBottomOf="@+id/test" />
+            <ImageView
+                android:layout_height="20dp"
+                android:layout_width="20dp"
+                android:src="@drawable/report"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintLeft_toRightOf="@+id/test1"
+                app:layout_constraintTop_toTopOf="@id/test1"/>
+
+            <TextView
+                android:id="@+id/test2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:layout_marginTop="5dp"
+                android:text="3) BLOOD TEST"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/test1"
+                app:layout_constraintTop_toBottomOf="@+id/test1" />
+            <ImageView
+                android:layout_height="20dp"
+                android:layout_width="20dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/report"
+                app:layout_constraintLeft_toRightOf="@+id/test2"
+                app:layout_constraintTop_toTopOf="@id/test2"/>
+
+            <Button
+                android:id="@+id/showqr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:text="Show QR Code"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/testReports" />
+
+            <Button
+                android:id="@+id/btn_send_dct"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:text="Send To "
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/showqr" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

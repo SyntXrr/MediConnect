@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile_form"
+    android:background="#d8fffe"
+    android:padding="10dp">
+
+        <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="81dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/circle_image"
+        android:elevation="8px"
+        android:padding="10dp"
+        android:src="@drawable/doctor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/raleway"
+        android:text=" I'm Doctor \n Let's create a profile"
+        android:textColor="#40bcba"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.286"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="44dp"
+        android:background="#40bcba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:background="#40bcba" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:elevation="8px"
+        android:fontFamily="@font/raleway"
+        android:text="Personal information . . ."
+        android:textColor="#40bcba"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <EditText
+            android:id="@+id/userFirstName"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/textbox_border"
+            android:ems="10"
+            android:hint="First name"
+            android:inputType="textPersonName"
+            android:padding="7dp"
+            android:textColorHint="#40bcba"
+            android:textColor="#40bcba"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <EditText
+            android:id="@+id/userLastName"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/textbox_border"
+            android:ems="10"
+            android:hint="Last name"
+            android:inputType="textPersonName"
+            android:padding="7dp"
+            android:textColor="#40bcba"
+            android:textColorHint="#40bcba"
+            app:layout_constraintEnd_toEndOf="@+id/userFirstName"
+            app:layout_constraintStart_toStartOf="@+id/userFirstName"
+            app:layout_constraintTop_toBottomOf="@+id/userFirstName" />
+
+        <EditText
+            android:id="@+id/userDOB"
+            android:layout_width="203dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/textbox_border"
+            android:ems="10"
+            android:hint="dd/mm/yyyy"
+            android:inputType="date"
+            android:padding="7dp"
+            android:textColor="#40bcba"
+            android:textColorHint="#40bcba"
+            app:layout_constraintEnd_toEndOf="@+id/userLastName"
+            app:layout_constraintStart_toStartOf="@+id/userLastName"
+            app:layout_constraintTop_toBottomOf="@+id/userLastName" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/raleway"
+            android:text="DOB : "
+            android:textColor="#40bcba"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/userDOB"
+            app:layout_constraintHorizontal_bias="0.672"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/raleway"
+            android:text="Gender :"
+            android:textColor="#40bcba"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView11"
+            app:layout_constraintHorizontal_bias="0.631"
+            app:layout_constraintStart_toStartOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <RadioGroup
+        android:id="@+id/userGender"
+        android:layout_width="230dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="31dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/userDOB"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="@+id/userDOB"
+        app:layout_constraintTop_toBottomOf="@+id/userDOB">
+
+            <RadioButton
+                android:id="@+id/genderMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:text="Male"
+                android:textColor="#40bcba"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/genderFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:text="Female"
+                android:textColor="#40bcba"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+            android:id="@+id/genderOther"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:fontFamily="@font/raleway"
+            android:text="Others"
+            android:textColor="#40bcba"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="32dp"
+        android:background="#40bcba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userGender"
+        tools:background="#40bcba" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/raleway"
+        android:text="Qulification . . ."
+        android:textColor="#40bcba"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:elevation="8px"
+        app:layout_constraintEnd_toEndOf="@+id/divider2"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="@+id/divider2"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#40bcba"
+        android:textSize="16sp"
+        android:fontFamily="@font/raleway"
+        android:textStyle="bold"
+        android:text="Select you degree/certification :"
+        app:layout_constraintEnd_toEndOf="@+id/textView13"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <EditText
+        android:id="@+id/UserQualification"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:padding="7dp"
+        android:textColor="#40bcba"
+        android:background="@drawable/textbox_border"
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="#40bcba"
+        android:textSize="16sp"
+        android:fontFamily="@font/raleway"
+        android:textStyle="bold"
+        android:text="Description about qualification :"
+        app:layout_constraintEnd_toEndOf="@+id/UserQualification"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="@+id/UserQualification"
+        app:layout_constraintTop_toBottomOf="@+id/UserQualification" />
+
+
+    <EditText
+        android:id="@+id/userQualidescription"
+        android:layout_width="340dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:background="@drawable/textbox_border"
+        android:padding="4dp"
+        android:textColor="#40bcba"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="32dp"
+        android:background="#40bcba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userQualidescription"
+        tools:background="#40bcba" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Address . . . . "
+        android:textColor="#40bcba"
+        android:textSize="17sp"
+        android:fontFamily="@font/raleway"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/divider3"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <EditText
+        android:id="@+id/addLine1"
+        android:layout_width="340dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:background="@drawable/textbox_border"
+        android:padding="7dp"
+        android:hint="Line 1"
+        android:inputType="text"
+        android:textColor="#40bcba"
+        android:textColorHint="#40bcba"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <EditText
+        android:id="@+id/addLine2"
+        android:layout_width="340dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:textColor="#40bcba"
+        android:textColorHint="#40bcba"
+        android:background="@drawable/textbox_border"
+        android:padding="7dp"
+        android:hint="Line 1"
+        android:layout_marginTop="10dp"
+        android:inputType="textPostalAddress"
+        app:layout_constraintStart_toStartOf="@+id/addLine1"
+        app:layout_constraintTop_toBottomOf="@+id/addLine1" />
+
+    <EditText
+        android:id="@+id/userCity"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="7dp"
+        android:hint="City"
+        android:textColor="#40bcba"
+        android:textColorHint="#40bcba"
+        android:background="@drawable/textbox_border"
+        app:layout_constraintEnd_toEndOf="@+id/addLine2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/addLine2"
+        app:layout_constraintTop_toBottomOf="@+id/addLine2" />
+
+    <EditText
+        android:id="@+id/userPincode"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:textColor="#40bcba"
+        android:textColorHint="#40bcba"
+        android:background="@drawable/textbox_border"
+        android:inputType="number"
+        android:hint="Pincode"
+        android:padding="7dp"
+        app:layout_constraintEnd_toEndOf="@+id/addLine2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/userCity"
+        app:layout_constraintTop_toBottomOf="@+id/addLine2" />
+
+    <EditText
+        android:id="@+id/userDistrict"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        android:hint="District"
+        android:textColor="#40bcba"
+        android:textColorHint="#40bcba"
+        android:background="@drawable/textbox_border"
+        android:padding="7dp"
+        app:layout_constraintEnd_toEndOf="@+id/userCity"
+        app:layout_constraintStart_toStartOf="@+id/userCity"
+        app:layout_constraintTop_toBottomOf="@+id/userCity" />
+
+    <EditText
+        android:id="@+id/userState"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="State"
+        android:layout_marginTop="10dp"
+        android:textColor="#40bcba"
+        android:textColorHint="#40bcba"
+        android:background="@drawable/textbox_border"
+        android:padding="7dp"
+        app:layout_constraintEnd_toEndOf="@+id/userPincode"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="@+id/userPincode"
+        app:layout_constraintTop_toBottomOf="@+id/userPincode" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="32dp"
+        android:background="#40bcba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userState"
+        tools:background="#40bcba" />
+
+        <Button
+            android:id="@+id/btnCreateProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/textbox_border"
+            android:fontFamily="@font/raleway"
+            android:text="Create Profile"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/divider4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_image"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView10"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            app:srcCompat="@drawable/doctor" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

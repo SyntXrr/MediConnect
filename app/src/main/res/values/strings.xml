@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MediConnect</string>
+    <string name="title_activity_item_detail_host">Item Detail Host Activity</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="select_doctor">Select Doctor</string>
+
+    <array name = "UserType">
+        <item>I am</item>
+        <item>Patient</item>
+        <item>Doctor</item>
+        <item>Medical</item>
+        <item>Pathology Laboratory</item>
+    </array>
+
+</resources>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/pre_details"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/back_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/txt_prescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_color"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Prescription"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pre_details" />
+
+    <TextView
+
+        android:id="@+id/txt_prescription_dt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/base_color"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Date : 24/10/2021"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_prescription" />
+
+    <View
+        android:id="@+id/custdt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/base_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_prescription_dt" />
+
+    <ImageView
+        android:id="@+id/prfl_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/patient"
+        app:layout_constraintBottom_toBottomOf="@+id/custdt"
+        app:layout_constraintLeft_toLeftOf="@+id/custdt"
+        app:layout_constraintTop_toTopOf="@+id/custdt" />
+
+    <TextView
+        android:id="@+id/pat_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/raleway"
+        android:text="Paresh Sudhir Pandit"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/prfl_icon"
+        app:layout_constraintTop_toTopOf="@+id/prfl_icon" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/raleway"
+        android:text="Male"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/prfl_icon"
+        app:layout_constraintStart_toEndOf="@+id/prfl_icon" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="23"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/textView42"
+        app:layout_constraintStart_toEndOf="@+id/textView42"
+        app:layout_constraintTop_toBottomOf="@+id/pat_name" />
+
+    <ScrollView
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/back_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custdt">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/med_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/back_color">
+
+            <View
+                android:id="@+id/med1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/med_list" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/medicine"
+                app:layout_constraintBottom_toBottomOf="@id/med1"
+                app:layout_constraintLeft_toLeftOf="@id/med1"
+                app:layout_constraintTop_toTopOf="@id/med1" />
+
+            <TextView
+                android:id="@+id/med_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="Parcetamol 200 MG"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+            <EditText
+                android:id="@+id/med_qty"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:background="@color/white"
+                android:fontFamily="@font/raleway"
+                android:hint="Qty"
+                android:padding="5dp"
+                android:textColor="@color/base_color"
+                android:textColorHint="@color/base_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/med1"
+                app:layout_constraintEnd_toEndOf="@+id/med1"
+                app:layout_constraintTop_toTopOf="@+id/med1" />
+
+            <EditText
+                android:id="@+id/med_prc"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/white"
+                android:fontFamily="@font/raleway"
+                android:hint="Rs."
+                android:padding="5dp"
+                android:textColor="@color/base_color"
+                android:textColorHint="@color/base_color"
+                app:layout_constraintBottom_toBottomOf="@+id/med_qty"
+                app:layout_constraintStart_toEndOf="@+id/med_qty"
+                app:layout_constraintTop_toTopOf="@+id/med_qty" />
+
+
+            <View
+                android:id="@+id/med2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/med1" />
+
+            <ImageView
+                android:id="@+id/med_ic2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/medicine"
+                app:layout_constraintBottom_toBottomOf="@id/med2"
+                app:layout_constraintLeft_toLeftOf="@id/med2"
+                app:layout_constraintTop_toTopOf="@id/med2" />
+
+            <TextView
+                android:id="@+id/med_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="Cetrazen 250 MG"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/med_ic2"
+                app:layout_constraintStart_toEndOf="@+id/med_ic2"
+                app:layout_constraintTop_toTopOf="@+id/med_ic2" />
+
+            <EditText
+                android:id="@+id/med_qty1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="114dp"
+                android:layout_marginRight="114dp"
+                android:background="@color/white"
+                android:fontFamily="@font/raleway"
+                android:hint="Qty"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/base_color"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/med2"
+                app:layout_constraintEnd_toEndOf="@+id/med2"
+                app:layout_constraintTop_toTopOf="@+id/med2"
+                app:layout_constraintVertical_bias="0.526" />
+
+            <EditText
+                android:id="@+id/med_prc1"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@color/white"
+                android:fontFamily="@font/raleway"
+                android:hint="Rs."
+                android:padding="5dp"
+                android:textColor="@color/base_color"
+                android:textColorHint="@color/base_color"
+                app:layout_constraintBottom_toBottomOf="@+id/med_qty1"
+                app:layout_constraintLeft_toRightOf="@+id/med_qty1"
+                app:layout_constraintTop_toTopOf="@+id/med_qty1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/base_color"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/pre_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/raleway"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/txt_Total"
+            android:text="Total : Rs. "/>
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/raleway"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/txt_Total_amt"
+            android:text="200/-"/>
+
+        <Button
+            android:layout_marginLeft="20sp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/base_color"
+            android:layout_height="match_parent"
+            android:layout_width="200dp"
+            android:text="Send Bill"
+            android:textSize="20sp"
+            android:fontFamily="@font/raleway"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

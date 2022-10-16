@@ -1,0 +1,4 @@
+#Sun Sep 11 23:58:38 IST 2022
+base.0=E\:\\PARESH\\STUDY\\PROJECTS\\MediConnect\\MediConnect\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8FFFE"
+    tools:context=".emergcall">
+
+    <ImageView
+        android:id="@+id/phonedetails"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle_image"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/phone" />
+
+    <TextView
+        android:id="@+id/emergcont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/raleway"
+        android:text="Emergancy Contacts"
+        android:textColor="#40bcba"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/phonedetails"
+        app:layout_constraintTop_toTopOf="@+id/phonedetails" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/raleway"
+        android:text="Helpline Numbers List"
+        android:textColor="#40bcba"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/phonedetails"
+        app:layout_constraintTop_toBottomOf="@+id/emergcont" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:background="#40bcba" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="National Emergancy-112"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="Police-100"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="Fire 101"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="Disaster Management Services-108"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="Women Helpline-1091"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="Air Ambulance-9540161344"
+                android:textColor="@color/white"
+                android:textSize="18sp" />v
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="Anti Poison New Delhi -1066"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="Railway Enquiry: 139"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="Senior Citizen Helpline: 1091/ 1291"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="Road Accident Emergency Service:1073"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="SChildren In Difficult Situation: 1098"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="Tourist Helpline: 1363 or 1800111363"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

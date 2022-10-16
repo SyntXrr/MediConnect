@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_lab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8FFFE"  >
+
+    <View
+        android:id="@+id/lab_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="#40bcba"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/photo_lab"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/white_border"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lab" />
+
+    <TextView
+        android:id="@+id/txt_path_lab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/raleway"
+        android:text="Pathology Lab"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/photo_lab"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lab_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Pendharakar Lab"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/photo_lab"
+        app:layout_constraintTop_toBottomOf="@+id/txt_path_lab" />
+
+    <TextView
+        android:id="@+id/lab_owner_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/raleway"
+        android:text="Shantanu Nimbalkar"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/photo_lab"
+        app:layout_constraintTop_toBottomOf="@+id/lab_name"
+        tools:fontFamily="@font/raleway" />
+
+    <HorizontalScrollView
+        android:id="@+id/lab_option"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lab_profile">
+
+        <LinearLayout
+            android:id="@+id/lab_option_list"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="#40bcba"
+                android:padding="5dp"
+                android:src="@drawable/mail" />
+
+            <TextView
+                android:id="@+id/lab_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="#40bcba"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:onClick="ShowLabChat"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="ChatBox"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="#40bcba"
+                android:padding="5dp"
+                android:src="@drawable/appointment" />
+
+            <TextView
+                android:id="@+id/lab_app_manage"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="#40bcba"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:onClick="showLabAppoint"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Appointment Management"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="#40bcba"
+                android:padding="3dp"
+                android:src="@drawable/report" />
+
+            <TextView
+                android:id="@+id/lab_report_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="#40bcba"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:onClick="showLabReport"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Reports Management"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/divider12"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="#40bcba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lab_option" />
+
+<!--  Lab ChatBox-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lab_chat1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider12">
+
+        <TextView
+            android:id="@+id/txt_inbx_lab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:text="Inbox"
+            android:textColor="@color/base_color"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/lab_chat1"
+            app:layout_constraintRight_toRightOf="@id/lab_chat1"
+            app:layout_constraintTop_toTopOf="@+id/lab_chat1" />
+
+        <ScrollView
+            android:id="@+id/c_lab"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/lab_chat1"
+            app:layout_constraintRight_toRightOf="@+id/lab_chat1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_inbx_lab">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/message_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="@+id/msg_list"
+                app:layout_constraintLeft_toLeftOf="@+id/msg_list"
+                app:layout_constraintRight_toRightOf="@+id/msg_list"
+                app:layout_constraintTop_toTopOf="@+id/msg_list">
+
+                <View
+                    android:id="@+id/msg1_lab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@color/base_color"
+                    android:padding="8dp"
+                    app:layout_constraintLeft_toLeftOf="@id/message_list"
+                    app:layout_constraintRight_toRightOf="@+id/message_list"
+                    app:layout_constraintTop_toTopOf="@id/message_list" />
+
+                <ImageView
+                    android:id="@+id/rec_icon_lab"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle_image"
+                    android:src="@drawable/patient"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg1_lab"
+                    app:layout_constraintLeft_toLeftOf="@+id/msg1_lab"
+                    app:layout_constraintTop_toTopOf="@+id/msg1_lab" />
+
+                <TextView
+                    android:id="@+id/rec_name_lab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Dr. Shantanu Nimbalkar"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toRightOf="@id/rec_icon_lab"
+                    app:layout_constraintTop_toTopOf="@+id/rec_icon_lab" />
+
+                <TextView
+                    android:id="@+id/massage4"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Hii"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@id/rec_icon_lab"
+                    app:layout_constraintTop_toBottomOf="@+id/rec_name_lab" />
+
+                <TextView
+                    android:id="@+id/msg_time4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="10:12 AM"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg1_lab"
+                    app:layout_constraintRight_toRightOf="@id/msg1_lab"
+                    app:layout_constraintTop_toTopOf="@+id/msg1_lab" />
+
+                <View
+                    android:id="@+id/msg2_lab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/base_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/msg1_lab" />
+
+                <ImageView
+                    android:id="@+id/rec_icon1_lab"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle_image"
+                    android:src="@drawable/lab"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg2_lab"
+                    app:layout_constraintLeft_toLeftOf="@+id/msg2_lab"
+                    app:layout_constraintTop_toTopOf="@+id/msg2_lab" />
+
+                <TextView
+                    android:id="@+id/rec_name1_lab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Path. Mayur Vaidya"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toRightOf="@id/rec_icon1_lab"
+                    app:layout_constraintTop_toTopOf="@+id/rec_icon1_lab" />
+
+                <TextView
+                    android:id="@+id/massage5"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Your Reports are here"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@id/rec_icon1_lab"
+                    app:layout_constraintTop_toBottomOf="@id/rec_name1_lab" />
+
+                <TextView
+                    android:id="@+id/msg_time5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="12:02 PM"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg2_lab"
+                    app:layout_constraintRight_toRightOf="@id/msg2_lab"
+                    app:layout_constraintTop_toTopOf="@+id/msg2_lab" />
+
+                <View
+                    android:id="@+id/msg3_lab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/base_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/msg2_lab" />
+
+                <ImageView
+                    android:id="@+id/rec_icon2_lab"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle_image"
+                    android:src="@drawable/medical"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg3_lab"
+                    app:layout_constraintLeft_toLeftOf="@+id/msg3_lab"
+                    app:layout_constraintTop_toTopOf="@+id/msg3_lab" />
+
+                <TextView
+                    android:id="@+id/rec_name2"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Med. Aditya Babar"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toRightOf="@id/rec_icon2_lab"
+                    app:layout_constraintTop_toTopOf="@+id/rec_icon2_lab" />
+
+                <TextView
+                    android:id="@+id/massage6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Your medicine are available now."
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@id/rec_icon2_lab"
+                    app:layout_constraintTop_toBottomOf="@id/rec_name2" />
+
+                <TextView
+                    android:id="@+id/msg_time6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="10:32 AM"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg3_lab"
+                    app:layout_constraintRight_toRightOf="@id/msg3_lab"
+                    app:layout_constraintTop_toTopOf="@+id/msg3_lab" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- appointment-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lab_app_mngt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider12">
+
+        <TextView
+            android:id="@+id/lab_txt_appoint_mngt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/base_color"
+            android:fontFamily="@font/raleway"
+            android:padding="5dp"
+            android:text="Appointment Managment"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lab_app_mngt" />
+
+        <View
+            android:id="@+id/patient12"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="#40bcba"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lab_txt_appoint_mngt" />
+
+        <ImageView
+            android:id="@+id/imageView345"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:padding="9dp"
+            app:layout_constraintBottom_toBottomOf="@+id/patient12"
+            app:layout_constraintStart_toStartOf="@+id/patient12"
+            app:layout_constraintTop_toTopOf="@+id/patient12"
+            app:srcCompat="@drawable/patient" />
+
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/raleway"
+            android:text="Aniket Namdeo Sawant"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView345"
+            app:layout_constraintTop_toTopOf="@+id/imageView345" />
+
+
+        <TextView
+            android:id="@+id/lab_app_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/raleway"
+            android:text="RT-PCR TEST"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView345"
+            app:layout_constraintLeft_toRightOf="@+id/imageView345"
+            app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+        <TextView
+            android:id="@+id/lab_app_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/raleway"
+            android:text="12AM"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/lab_app_test"
+            app:layout_constraintTop_toBottomOf="@+id/lab_app_test"
+            app:layout_constraintTop_toTopOf="@+id/lab_app_test" />
+
+        <TextView
+            android:id="@+id/Confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:fontFamily="@font/raleway"
+            android:text="Confirm"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/patient12"
+            app:layout_constraintStart_toEndOf="@+id/textView45"
+            app:layout_constraintTop_toTopOf="@id/patient12" />
+
+        <TextView
+            android:id="@+id/delet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:text="Delet"
+            android:textColor="#ff0000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/patient12"
+            app:layout_constraintLeft_toRightOf="@id/Confirm"
+            app:layout_constraintRight_toRightOf="@id/patient12"
+            app:layout_constraintTop_toTopOf="@id/patient12" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Report management-->
+    <ScrollView
+        android:id="@+id/lab_report1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider12">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lab_reortView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+            <TextView
+                android:id="@+id/txt_my_lab_report"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#40bcba"
+                android:fontFamily="@font/raleway"
+                android:padding="4dp"
+                android:text="Send Reports"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.555"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lab_reortView"
+                tools:textStyle="bold" />
+
+
+            <View
+                android:id="@+id/send_report_consol"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_my_lab_report" />
+
+            <EditText
+                android:id="@+id/edit_selct_patient"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="Select Patient"
+                android:padding="4dp"
+                android:textColorHint="@color/white"
+                app:layout_constraintLeft_toLeftOf="@+id/send_report_consol"
+                app:layout_constraintRight_toRightOf="@+id/send_report_consol"
+                app:layout_constraintTop_toTopOf="@+id/send_report_consol" />
+
+            <EditText
+                android:id="@+id/edit_selct_report"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="Select Report"
+                android:padding="4dp"
+                android:textColorHint="@color/white"
+                app:layout_constraintLeft_toLeftOf="@+id/send_report_consol"
+                app:layout_constraintRight_toRightOf="@+id/send_report_consol"
+                app:layout_constraintTop_toBottomOf="@+id/edit_selct_patient" />
+
+            <Button
+                android:id="@+id/btn_send_report"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/raleway"
+                android:text="Send Report"
+                android:textAllCaps="false"
+                android:textColor="@color/base_color"
+                app:cornerRadius="0dp"
+                app:layout_constraintLeft_toLeftOf="@+id/send_report_consol"
+                app:layout_constraintRight_toRightOf="@+id/send_report_consol"
+                app:layout_constraintTop_toBottomOf="@+id/edit_selct_report" />
+
+            <View
+                android:id="@+id/lab_report_rec1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/send_report_consol" />
+
+            <ImageView
+                android:id="@+id/lab_prflphoto1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:src="@drawable/doctor"
+                app:layout_constraintBottom_toBottomOf="@+id/lab_report_rec1"
+                app:layout_constraintLeft_toLeftOf="@+id/lab_report_rec1"
+                app:layout_constraintStart_toStartOf="@+id/lab_report_rec1"
+                app:layout_constraintTop_toBottomOf="@+id/lab_report_rec1"
+                app:layout_constraintTop_toTopOf="@+id/lab_report_rec1" />
+
+            <TextView
+                android:id="@+id/lab_report_rec_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="Dr. Shantanu Nimbalkar"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/lab_prflphoto1"
+                app:layout_constraintTop_toTopOf="@+id/lab_prflphoto1" />
+
+            <TextView
+                android:id="@+id/lab_report_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="RT-PCR TEST Report"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lab_prflphoto1"
+                app:layout_constraintLeft_toRightOf="@+id/lab_prflphoto1"
+                app:layout_constraintTop_toBottomOf="@+id/lab_report_rec_name" />
+
+            <TextView
+                android:id="@+id/lab_report_send_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="12PM"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/lab_report_rec1"
+                app:layout_constraintRight_toRightOf="@+id/lab_report_rec1"
+                app:layout_constraintTop_toTopOf="@+id/lab_report_rec1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lab_holder_add_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/shadow_btn"
+        android:elevation="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/lab_New_conv_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle_image"
+            android:src="@drawable/add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

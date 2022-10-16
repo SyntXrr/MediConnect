@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8FFFE">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8FFFE">
+
+    <ImageView
+        android:id="@+id/img_signup"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/circle_image"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/registration" />
+
+    <TextView
+        android:id="@+id/txt_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="#40bcba"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_signup"
+        tools:fontFamily="@font/raleway" />
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/raleway"
+        android:gravity="center_horizontal"
+        android:text="Invalid"
+        android:textColor="#ff0000"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/txt_signup"
+        app:layout_constraintRight_toRightOf="@id/txt_signup"
+        app:layout_constraintTop_toBottomOf="@id/txt_signup" />
+
+    <Spinner
+        android:id="@+id/select"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/textbox_border"
+        android:entries="@array/UserType"
+        android:fontFamily="@font/raleway"
+        android:padding="12dp"
+        android:textColor="@color/base_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/warning" />
+
+    <EditText
+        android:id="@+id/inpt_phno"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textbox_border"
+        android:fontFamily="@font/raleway"
+        android:hint="Phone No"
+        android:inputType="number"
+        android:padding="12dp"
+        android:textColor="#40bcba"
+        android:textColorHint="#40bcba"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select"
+        tools:fontFamily="@font/raleway"
+        tools:textColorHint="#40bcba" />
+
+    <EditText
+        android:id="@+id/inpt_email"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textbox_border"
+        android:fontFamily="@font/raleway"
+        android:hint="Email"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="#40bcba"
+        android:textColorHint="#40bcba"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpt_phno"
+        tools:fontFamily="@font/raleway"
+        tools:textColorHint="#40bcba" />
+
+    <Button
+        android:id="@+id/btn_gtotp"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="#40bcba"
+        android:fontFamily="@font/raleway"
+        android:onClick="openWinOTP"
+        android:text="Get OTP"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpt_email"
+        tools:cornerRadius="4dp"
+        tools:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/win_verify_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/btn_gtotp"
+        app:layout_constraintRight_toRightOf="@+id/btn_gtotp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gtotp">
+
+        <EditText
+            android:id="@+id/edit_ph_otp"
+            android:layout_width="280dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textbox_border"
+            android:gravity="center"
+            android:hint="Phone OTP"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColor="@color/base_color"
+            android:textColorHint="@color/base_color" />
+
+        <EditText
+            android:id="@+id/edit_email_otp"
+            android:layout_width="280dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textbox_border"
+            android:gravity="center"
+            android:hint="Email OTP"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColor="@color/base_color"
+            android:textColorHint="@color/base_color" />
+
+        <Button
+            android:id="@+id/btn_verify_otp"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:cornerRadius="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/win_Newpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/btn_gtotp"
+        app:layout_constraintRight_toRightOf="@+id/btn_gtotp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gtotp">
+
+        <EditText
+            android:id="@+id/edit_NewPass"
+            android:layout_width="280dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textbox_border"
+            android:gravity="center"
+            android:hint="New Password"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:textColor="@color/base_color"
+            android:textColorHint="@color/base_color" />
+
+        <EditText
+            android:id="@+id/edit_ConfNewPass"
+            android:layout_width="280dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textbox_border"
+            android:gravity="center"
+            android:hint="Confirm New Password"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColor="@color/base_color"
+            android:textColorHint="@color/base_color" />
+
+        <Button
+            android:id="@+id/btn_Continue"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway"
+            android:text="Continue"
+            android:onClick="openCreatNewPass"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:cornerRadius="0dp" />
+    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

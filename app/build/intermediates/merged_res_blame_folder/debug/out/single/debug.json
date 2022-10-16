@@ -1,0 +1,350 @@
+[
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_textbox_border.xml.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/textbox_border.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-xhdpi_id_selection.png.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-xhdpi/id_selection.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_lab.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_lab.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_conversation.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_conversation.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_emergcall.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_emergcall.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.mediconnect.app-main-27:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_hospit.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/hospit.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-anydpi-v21_id_selection.xml.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-anydpi-v21/id_selection.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_mail.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/mail.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.mediconnect.app-main-27:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_lab.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/lab.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_phone.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/phone.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_main_logo.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/main_logo.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_addnew_issue.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_addnew_issue.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_appointment.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/appointment.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_textbox_whiteborder.xml.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/textbox_whiteborder.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_doctor.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_doctor.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.mediconnect.app-main-27:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_doctor.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/doctor.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_pol.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/pol.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.mediconnect.app-main-27:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_location.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/location.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_box_background.xml.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/box_background.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-mdpi_id_selection.png.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-mdpi/id_selection.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.mediconnect.app-main-27:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_report.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/report.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_sign_in.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/sign_in.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_main.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_custom_background.xml.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/custom_background.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/navigation_primary_details_nav_graph.xml.flat",
+        "source": "com.mediconnect.app-main-27:/navigation/primary_details_nav_graph.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.mediconnect.app-main-27:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_lab_location.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_lab_location.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_white_border.xml.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/white_border.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_send.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/send.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-ldpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-anydpi-v21/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-ldpi_id_selection.png.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-ldpi/id_selection.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_medical_store.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_medical_store.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-xxxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/navigation_primary_details_sub_nav_graph.xml.flat",
+        "source": "com.mediconnect.app-main-27:/navigation/primary_details_sub_nav_graph.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_signup.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_order.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/order.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_registration.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/registration.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_spiner_text.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/spiner_text.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_add.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/add.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_medicine.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/medicine.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_link.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/link.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-xxhdpi_id_selection.png.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-xxhdpi/id_selection.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.mediconnect.app-main-27:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_creatprfl.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_creatprfl.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_profile.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_profile.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_forgotpassword.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_forgotpassword.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_ambulance.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/ambulance.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_police.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_police.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/mipmap-hdpi_logo.png.flat",
+        "source": "com.mediconnect.app-main-27:/mipmap-hdpi/logo.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_newconversation.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_newconversation.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_signin.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_signin.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_medical.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_medical.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_reports.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/reports.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-xxxhdpi_id_selection.png.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-xxxhdpi/id_selection.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.mediconnect.app-main-27:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_medicine_store.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/medicine_store.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_shadow_btn.xml.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/shadow_btn.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_hospital.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_hospital.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_calender.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/calender.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_homescreen.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_homescreen.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/font_raleway.xml.flat",
+        "source": "com.mediconnect.app-main-27:/font/raleway.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_patient.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_patient.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_patient.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/patient.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.mediconnect.app-main-27:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.mediconnect.app-main-27:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_prescription.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_prescription.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable-hdpi_id_selection.png.flat",
+        "source": "com.mediconnect.app-pngs-20:/drawable-hdpi/id_selection.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_new_patient.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_new_patient.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.mediconnect.app-main-27:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_issuedetails.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_issuedetails.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_window_background.xml.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/window_background.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.mediconnect.app-main-27:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_circle_image.xml.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/circle_image.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_ambulance.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_ambulance.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/layout_activity_patient_issuedetails.xml.flat",
+        "source": "com.mediconnect.app-main-27:/layout/activity_patient_issuedetails.xml"
+    },
+    {
+        "merged": "com.mediconnect.app-merged_res-25:/drawable_medical.png.flat",
+        "source": "com.mediconnect.app-main-27:/drawable/medical.png"
+    }
+]

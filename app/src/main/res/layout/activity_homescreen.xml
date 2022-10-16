@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#D8FFFE">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/homescreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8FFFE"
+    tools:context=".Homescreen" >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/circle_image"
+        android:elevation="8px"
+        android:padding="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_logo" />
+
+        <TextView
+            android:id="@+id/logo_name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/raleway"
+            android:gravity="center"
+            android:text="MediConnect"
+            android:textColor="#40bdba"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="108dp"
+        android:elevation="8px"
+        android:fontFamily="@font/raleway"
+        android:shadowColor="@color/black"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#40bcba"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_name" />
+
+    <Button
+        android:id="@+id/btn_signin"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:elevation="8px"
+        android:fontFamily="@font/raleway"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#40bcba"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signup" />
+
+    <ImageView
+        android:id="@+id/emr_phone"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle_image"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/phone" />
+
+        <ImageView
+            android:id="@+id/police"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_image"
+            android:padding="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/ambulance"
+            app:layout_constraintStart_toEndOf="@+id/emr_phone"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:srcCompat="@drawable/pol" />
+
+    <ImageView
+        android:id="@+id/ambulance"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/circle_image"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/ambulance" />
+
+
+        <TextView
+            android:id="@+id/txt_emr_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Emergancy Contacts"
+            android:textColor="#40bcba"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/emr_phone"
+            app:layout_constraintStart_toStartOf="@+id/emr_phone"
+            app:layout_constraintTop_toBottomOf="@+id/emr_phone"
+            tools:fontFamily="@font/raleway" />
+
+        <TextView
+            android:id="@+id/txt_ambulance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Ambulance"
+            android:textColor="#40bcba"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/ambulance"
+            app:layout_constraintStart_toStartOf="@+id/ambulance"
+            app:layout_constraintTop_toBottomOf="@+id/ambulance" />
+
+    <ImageView
+        android:id="@+id/hospital"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle_image"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_emr_phone"
+        app:srcCompat="@drawable/hospit" />
+
+        <ImageView
+            android:id="@+id/laboratory"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_image"
+            android:padding="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/medical_store"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toEndOf="@+id/hospital"
+            app:layout_constraintTop_toBottomOf="@+id/txt_police"
+            app:srcCompat="@drawable/lab" />
+
+    <ImageView
+        android:id="@+id/medical_store"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/circle_image"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ambulance"
+        app:srcCompat="@drawable/medical" />
+
+        <TextView
+            android:id="@+id/txt_hospital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:gravity="center"
+            android:text="Hospital"
+            android:textColor="#40bcba"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/hospital"
+            app:layout_constraintStart_toStartOf="@+id/hospital"
+            app:layout_constraintTop_toBottomOf="@+id/hospital" />
+
+        <TextView
+            android:id="@+id/text_lab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:gravity="center"
+            android:text="Pathology Lab"
+            android:textColor="#40bcba"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/laboratory"
+            app:layout_constraintStart_toStartOf="@+id/laboratory"
+            app:layout_constraintTop_toBottomOf="@+id/laboratory" />
+
+        <TextView
+            android:id="@+id/textmedicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:gravity="center"
+            android:text="Medicine Store"
+            android:textColor="#40bcba"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/medical_store"
+            app:layout_constraintStart_toStartOf="@+id/medical_store"
+            app:layout_constraintTop_toBottomOf="@+id/medical_store" />
+
+        <TextView
+            android:id="@+id/txt_police"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:gravity="center"
+            android:text="Police"
+            android:textColor="#40bcba"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/police"
+            app:layout_constraintStart_toStartOf="@+id/police"
+            app:layout_constraintTop_toBottomOf="@+id/police" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="50dp"
+        android:background="#40bcba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signin"
+        tools:background="#40bcba" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/raleway"
+        android:text="Search Locations near me"
+        android:textColor="#40bcba"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

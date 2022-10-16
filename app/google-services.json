@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "599450935375",
+    "project_id": "mediconnect-4c388",
+    "storage_bucket": "mediconnect-4c388.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599450935375:android:c48d569ff03cb2fe7a0a3a",
+        "android_client_info": {
+          "package_name": "com.mediconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599450935375-78abinkqumrfffrp870t1dm8cdfmdhvo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrQlM5NZJr9SPAxFN1UYYWYZrDnTe9a3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599450935375-78abinkqumrfffrp870t1dm8cdfmdhvo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

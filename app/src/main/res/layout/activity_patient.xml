@@ -1,0 +1,1591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_patient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8FFFE"
+    android:visibility="visible">
+
+    <View
+        android:id="@+id/patient_details"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="#40bcba"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/photo_patient"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/white_border"
+        android:padding="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/patient" />
+
+    <TextView
+        android:id="@+id/patient_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:fontFamily="@font/raleway"
+        android:text="Paresh Pandit"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/photo_patient"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:fontFamily="@font/raleway" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/raleway"
+        android:text="Patient"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/photo_patient"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gender_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:fontFamily="@font/raleway"
+        android:text="Male, 25"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/patient_details"
+        app:layout_constraintStart_toEndOf="@+id/photo_patient"
+        app:layout_constraintTop_toBottomOf="@+id/patient_name" />
+
+    <HorizontalScrollView
+        android:id="@+id/option"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patient_details">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="#40bcba"
+                android:padding="5dp"
+                android:src="@drawable/mail" />
+
+            <TextView
+                android:id="@+id/chat_box"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="#40bcba"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:onClick="ShowChat"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="ChatBox"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="#40bcba"
+                android:padding="5dp"
+                android:src="@drawable/appointment" />
+
+            <TextView
+                android:id="@+id/my_appointment"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="#40bcba"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:onClick="showAppointment"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Appointment"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="#40bcba"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/my_issues"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="#40bcba"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:onClick="showIssue"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Issues"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="#40bcba"
+                android:padding="5dp"
+                android:src="@drawable/medicine" />
+
+            <TextView
+                android:id="@+id/my_medicines"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="#40bcba"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:onClick="showMedicine"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Medicines"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="#40bcba"
+                android:padding="5dp"
+                android:src="@drawable/report" />
+
+            <TextView
+                android:id="@+id/my_reports"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="#40bcba"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:onClick="showReport"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Reports"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="#40bcba"
+                android:padding="5dp"
+                android:src="@drawable/order" />
+
+            <TextView
+                android:id="@+id/my_order"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="#40bcba"
+                android:fontFamily="@font/raleway"
+                android:gravity="center_vertical"
+                android:onClick="showOrder"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Medicine Orders"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="#40bcba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/option" />
+
+
+    <!--    Chat-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider8">
+
+        <TextView
+            android:id="@+id/txt_inbx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:text="Inbox"
+            android:textColor="@color/base_color"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/chat"
+            app:layout_constraintRight_toRightOf="@id/chat"
+            app:layout_constraintTop_toTopOf="@+id/chat" />
+
+        <ScrollView
+            android:id="@+id/c"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/chat"
+            app:layout_constraintRight_toRightOf="@+id/chat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_inbx">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/message_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/msg_list"
+                app:layout_constraintLeft_toLeftOf="@+id/msg_list"
+                app:layout_constraintRight_toRightOf="@+id/msg_list"
+                app:layout_constraintTop_toTopOf="@+id/msg_list">
+
+                <View
+                    android:id="@+id/msg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@color/base_color"
+                    android:onClick="openConversation"
+                    android:padding="8dp"
+                    app:layout_constraintLeft_toLeftOf="@id/message_list"
+                    app:layout_constraintRight_toRightOf="@+id/message_list"
+                    app:layout_constraintTop_toTopOf="@id/message_list" />
+
+                <ImageView
+                    android:id="@+id/rec_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle_image"
+                    android:src="@drawable/patient"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg1"
+                    app:layout_constraintLeft_toLeftOf="@+id/msg1"
+                    app:layout_constraintTop_toTopOf="@+id/msg1" />
+
+                <TextView
+                    android:id="@+id/rec_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Dr. Shantanu Nimbalkar"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toRightOf="@id/rec_icon"
+                    app:layout_constraintTop_toTopOf="@+id/rec_icon" />
+
+                <TextView
+                    android:id="@+id/massage"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Hii"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@id/rec_icon"
+                    app:layout_constraintTop_toBottomOf="@+id/rec_name" />
+
+                <TextView
+                    android:id="@+id/msg_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="10:12 AM"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg1"
+                    app:layout_constraintRight_toRightOf="@id/msg1"
+                    app:layout_constraintTop_toTopOf="@+id/msg1" />
+
+                <View
+                    android:id="@+id/msg2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/base_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/msg1" />
+
+                <ImageView
+                    android:id="@+id/rec_icon1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle_image"
+                    android:src="@drawable/lab"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg2"
+                    app:layout_constraintLeft_toLeftOf="@+id/msg2"
+                    app:layout_constraintTop_toTopOf="@+id/msg2" />
+
+                <TextView
+                    android:id="@+id/rec_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Path. Mayur Vaidya"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toRightOf="@id/rec_icon1"
+                    app:layout_constraintTop_toTopOf="@+id/rec_icon1" />
+
+                <TextView
+                    android:id="@+id/massage2"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Your Reports are here"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@id/rec_icon1"
+                    app:layout_constraintTop_toBottomOf="@id/rec_name1" />
+
+                <TextView
+                    android:id="@+id/msg_time1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="12:02 PM"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg2"
+                    app:layout_constraintRight_toRightOf="@id/msg2"
+                    app:layout_constraintTop_toTopOf="@+id/msg2" />
+
+                <View
+                    android:id="@+id/msg3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/base_color"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/msg2" />
+
+                <ImageView
+                    android:id="@+id/rec_icon2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/circle_image"
+                    android:src="@drawable/medical"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg3"
+                    app:layout_constraintLeft_toLeftOf="@+id/msg3"
+                    app:layout_constraintTop_toTopOf="@+id/msg3" />
+
+                <TextView
+                    android:id="@+id/rec_name2"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Med. Aditya Babar"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toRightOf="@id/rec_icon2"
+                    app:layout_constraintTop_toTopOf="@+id/rec_icon2" />
+
+                <TextView
+                    android:id="@+id/massage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Your medicine are available now."
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@id/rec_icon2"
+                    app:layout_constraintTop_toBottomOf="@id/rec_name2" />
+
+                <TextView
+                    android:id="@+id/msg_time2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="10:32 AM"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/msg3"
+                    app:layout_constraintRight_toRightOf="@id/msg3"
+                    app:layout_constraintTop_toTopOf="@+id/msg3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        //add button
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/med_holder_add_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/shadow_btn"
+            android:elevation="4dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/New_conv_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle_image"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    Appointment-->
+
+    <ScrollView
+        android:id="@+id/appointment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/card_appointment"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_margin="10dp"
+                android:background="@color/base_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_bkyrapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Book Your Appointment"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/card_appointment"
+                app:layout_constraintRight_toRightOf="@id/card_appointment"
+                app:layout_constraintTop_toTopOf="@id/card_appointment" />
+
+            <EditText
+                android:id="@+id/reason"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="Write Reason"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="@id/txt_bkyrapp"
+                app:layout_constraintRight_toRightOf="@id/txt_bkyrapp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_bkyrapp" />
+
+            <EditText
+                android:id="@+id/select_dct"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="Select Doctor / Lab"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="@id/reason"
+                app:layout_constraintRight_toRightOf="@id/reason"
+                app:layout_constraintTop_toBottomOf="@+id/reason" />
+
+            <TextView
+                android:id="@+id/txtselect_dt"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="Select Date:"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@id/select_dct"
+                app:layout_constraintRight_toLeftOf="@+id/select_dd"
+                app:layout_constraintTop_toBottomOf="@id/select_dct" />
+
+            <EditText
+                android:id="@+id/select_dd"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/textbox_border"
+                android:fontFamily="@font/raleway"
+                android:hint="DD"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/txtselect_dt"
+                app:layout_constraintLeft_toRightOf="@id/txtselect_dt"
+                app:layout_constraintTop_toTopOf="@id/txtselect_dt" />
+
+            <EditText
+                android:id="@+id/select_mm"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="MM"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/select_dd"
+                app:layout_constraintLeft_toRightOf="@id/select_dd"
+                app:layout_constraintTop_toTopOf="@id/select_dd" />
+
+            <EditText
+                android:id="@+id/select_yyyy"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="YYYY"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/select_mm"
+                app:layout_constraintEnd_toEndOf="@+id/select_dct"
+                app:layout_constraintLeft_toRightOf="@id/select_mm"
+                app:layout_constraintTop_toTopOf="@id/select_mm" />
+
+            <TextView
+                android:id="@+id/txtselect_time"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="Select Time:"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/txtselect_dt"
+                app:layout_constraintTop_toBottomOf="@id/txtselect_dt" />
+
+            <EditText
+                android:id="@+id/select_time"
+                android:layout_width="135dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="Time Slot"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/txtselect_time"
+                app:layout_constraintEnd_toEndOf="@+id/select_yyyy"
+                app:layout_constraintStart_toEndOf="@+id/txtselect_time"
+                app:layout_constraintTop_toTopOf="@id/txtselect_time" />
+
+            <Button
+                android:id="@+id/bk_appoint"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Book Appointment"
+                android:textAllCaps="false"
+                android:textColor="@color/base_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/card_appointment"
+                app:layout_constraintEnd_toEndOf="@+id/select_time"
+                app:layout_constraintStart_toStartOf="@+id/txtselect_time"
+                tools:fontFamily="@font/raleway" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="10dp"
+                android:background="@color/base_color"
+                app:layout_constraintLeft_toLeftOf="@id/card_appointment"
+                app:layout_constraintRight_toRightOf="@id/card_appointment"
+                app:layout_constraintTop_toBottomOf="@id/card_appointment" />
+
+            <View
+                android:id="@+id/app1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@color/base_color"
+                app:layout_constraintLeft_toLeftOf="@id/card_appointment"
+                app:layout_constraintRight_toRightOf="@id/card_appointment"
+                app:layout_constraintTop_toBottomOf="@id/divider5" />
+
+            <TextView
+                android:id="@+id/app_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="COVID-19"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@id/app1"
+                app:layout_constraintTop_toTopOf="@id/app1" />
+
+            <TextView
+                android:id="@+id/dr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="Dr. Shantanu Nimbalkar"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_bias="0.055"
+                app:layout_constraintLeft_toLeftOf="@id/app_reason"
+                app:layout_constraintRight_toRightOf="@id/app_reason"
+                app:layout_constraintTop_toBottomOf="@id/app_reason" />
+
+            <TextView
+                android:id="@+id/app_dt_tm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="22-12-2021, 10AM"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/app1"
+                app:layout_constraintLeft_toLeftOf="@id/app1"
+                app:layout_constraintTop_toBottomOf="@id/dr_name"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/app_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/raleway"
+                android:text="Pending"
+                android:textColor="#ff0000"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/app1"
+                app:layout_constraintRight_toRightOf="@id/app1"
+                app:layout_constraintTop_toTopOf="@id/app1" />
+
+            <View
+                android:id="@+id/app2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@color/base_color"
+                app:layout_constraintLeft_toLeftOf="@id/card_appointment"
+                app:layout_constraintRight_toRightOf="@id/card_appointment"
+                app:layout_constraintTop_toBottomOf="@id/app1" />
+
+            <TextView
+                android:id="@+id/app_reason2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="Heart Attck"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@id/app2"
+                app:layout_constraintTop_toTopOf="@id/app2" />
+
+            <TextView
+                android:id="@+id/dr_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="Dr. Shantanu Nimbalkar"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintLeft_toLeftOf="@id/app_reason2"
+                app:layout_constraintRight_toRightOf="@id/app_reason2"
+                app:layout_constraintTop_toBottomOf="@id/app_reason2" />
+
+            <TextView
+                android:id="@+id/app_dt_tm2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="22-12-2021, 10AM"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/app2"
+                app:layout_constraintLeft_toLeftOf="@id/app2"
+                app:layout_constraintTop_toBottomOf="@id/dr_name2" />
+
+            <TextView
+                android:id="@+id/app_confirm2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/raleway"
+                android:text="Confirm"
+                android:textColor="#339900"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/app2"
+                app:layout_constraintRight_toRightOf="@id/app2"
+                app:layout_constraintTop_toTopOf="@id/app2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+    <!--    Issue-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/issue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/my_health_issue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_hlth_iss"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#40bcba"
+                android:fontFamily="@font/raleway"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="My Health Issues.."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:textStyle="bold" />
+
+            <View
+                android:id="@+id/card_issue"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="8dp"
+                android:background="#40bcba"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.476"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_hlth_iss" />
+
+            <TextView
+                android:id="@+id/issue_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="COVID-19"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/card_issue"
+                app:layout_constraintStart_toStartOf="@+id/card_issue"
+                app:layout_constraintTop_toTopOf="@+id/card_issue" />
+
+            <View
+                android:id="@+id/card_issue2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="#40bcba"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_issue" />
+
+            <TextView
+                android:id="@+id/issue_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Heart Attck"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/card_issue2"
+                app:layout_constraintStart_toStartOf="@+id/card_issue2"
+                app:layout_constraintTop_toTopOf="@+id/card_issue2" />
+
+            <TextView
+                android:id="@+id/doctor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Dr.Mayur Vaidya"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/card_issue"
+                app:layout_constraintEnd_toEndOf="@+id/card_issue"
+                app:layout_constraintTop_toTopOf="@+id/card_issue" />
+
+            <TextView
+                android:id="@+id/doctor_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Dr.Adity Babar"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/card_issue2"
+                app:layout_constraintEnd_toEndOf="@+id/card_issue2"
+                app:layout_constraintTop_toTopOf="@+id/card_issue2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        //add button
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/holder_add_btn1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/shadow_btn"
+            android:elevation="4dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/add_newissue_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle_image"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    Medicine-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/medicine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider8">
+
+        //Add Medicine
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/new_med_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/medicine">
+
+            <View
+                android:id="@+id/card_add_medicine"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@color/base_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/new_med_add" />
+
+            <TextView
+                android:id="@+id/txt_add_newmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Add Your Medicines"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/card_add_medicine"
+                app:layout_constraintRight_toRightOf="@id/card_add_medicine"
+                app:layout_constraintTop_toTopOf="@id/card_add_medicine" />
+
+            <EditText
+                android:id="@+id/med_type"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="Medicine Type"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="@+id/txt_add_newmed"
+                app:layout_constraintRight_toRightOf="@+id/txt_add_newmed"
+                app:layout_constraintTop_toBottomOf="@+id/txt_add_newmed" />
+
+            <EditText
+                android:id="@+id/medicine_name"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="Medcine Name"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="@+id/med_type"
+                app:layout_constraintRight_toRightOf="@+id/med_type"
+                app:layout_constraintTop_toBottomOf="@+id/med_type" />
+
+            <TextView
+                android:id="@+id/txtselect_medtime"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="Select Time:"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="@+id/medicine_name"
+                app:layout_constraintTop_toBottomOf="@id/medicine_name" />
+
+            <EditText
+                android:id="@+id/inpt_medtime"
+                android:layout_width="135dp"
+                android:layout_height="30dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="Time Slot"
+                android:paddingLeft="2dp"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtselect_medtime"
+                app:layout_constraintEnd_toEndOf="@+id/medicine_name"
+                app:layout_constraintLeft_toRightOf="@id/txtselect_medtime"
+                app:layout_constraintTop_toBottomOf="@id/txtselect_medtime"
+                app:layout_constraintTop_toTopOf="@id/txtselect_medtime" />
+
+            <Button
+                android:id="@+id/add_newmed_btn"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/raleway"
+                android:text="Add New Medicine"
+                android:textAllCaps="false"
+                android:textColor="@color/base_color"
+                android:textSize="18sp"
+                app:cornerRadius="0dp"
+                app:layout_constraintLeft_toLeftOf="@id/txtselect_medtime"
+                app:layout_constraintRight_toRightOf="@id/inpt_medtime"
+                app:layout_constraintTop_toBottomOf="@id/txtselect_medtime" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/base_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_med_add" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/medcine_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2">
+
+            <TextView
+                android:id="@+id/txt_mymedicine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#40bcba"
+                android:fontFamily="@font/raleway"
+                android:padding="4dp"
+                android:text="My Medicine"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:textStyle="bold" />
+
+            //Treatment
+
+            <View
+                android:id="@+id/med1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_mymedicine" />
+
+            <ImageView
+                android:id="@+id/icon_medcine"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/medicine"
+                app:layout_constraintLeft_toLeftOf="@id/med1"
+                app:layout_constraintTop_toTopOf="@id/med1" />
+
+            <TextView
+                android:id="@+id/txt_med_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="TAB.Paracetamol 500Mg"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/icon_medcine"
+                app:layout_constraintLeft_toRightOf="@id/icon_medcine"
+                app:layout_constraintTop_toBottomOf="@id/icon_medcine"
+                app:layout_constraintTop_toTopOf="@+id/icon_medcine" />
+
+            <TextView
+                android:id="@+id/med_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="9 AM"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/txt_med_name"
+                app:layout_constraintRight_toRightOf="@+id/med1"
+                app:layout_constraintTop_toTopOf="@+id/txt_med_name" />
+
+            <View
+                android:id="@+id/med2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/med1" />
+
+            <ImageView
+                android:id="@+id/icon_medcine1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/medicine"
+                app:layout_constraintLeft_toLeftOf="@id/med2"
+                app:layout_constraintTop_toTopOf="@id/med2" />
+
+            <TextView
+                android:id="@+id/txt_med_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="TAB.Citrazen 250Mg"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/icon_medcine1"
+                app:layout_constraintLeft_toRightOf="@id/icon_medcine1"
+                app:layout_constraintTop_toBottomOf="@id/icon_medcine1"
+                app:layout_constraintTop_toTopOf="@+id/icon_medcine1" />
+
+            <TextView
+                android:id="@+id/med_time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="9 PM"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/txt_med_name1"
+                app:layout_constraintRight_toRightOf="@+id/med2"
+                app:layout_constraintTop_toTopOf="@+id/txt_med_name1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    Report-->
+
+    <ScrollView
+        android:id="@+id/report"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/reortView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:visibility="visible">
+
+
+            <TextView
+                android:id="@+id/txt_my_report"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#40bcba"
+                android:fontFamily="@font/raleway"
+                android:padding="4dp"
+                android:text="My Report"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/reortView"
+                tools:textStyle="bold" />
+
+
+            <View
+                android:id="@+id/card_send_report"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_my_report" />
+
+            <TextView
+                android:id="@+id/txt_send_your_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Send Your Report"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/card_send_report" />
+
+            <EditText
+                android:id="@+id/pat_select_doctor"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="Select Doctor"
+                android:padding="2dp"
+                android:textColorHint="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_send_your_report" />
+
+            <EditText
+                android:id="@+id/pat_select_report"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="Select Report"
+                android:padding="2dp"
+                android:textColorHint="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pat_select_doctor" />
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/raleway"
+                android:text="Send Report"
+                android:textAllCaps="false"
+                android:textColor="@color/base_color"
+                android:textSize="18sp"
+                app:cornerRadius="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/card_send_report"
+                app:layout_constraintLeft_toLeftOf="@+id/card_send_report"
+                app:layout_constraintRight_toRightOf="@+id/card_send_report" />
+
+            <View
+                android:id="@+id/divider20"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_send_report" />
+
+            <View
+                android:id="@+id/report_rec"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider20" />
+
+            <ImageView
+                android:id="@+id/prflphoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:src="@drawable/doctor"
+                app:layout_constraintBottom_toBottomOf="@+id/report_rec"
+                app:layout_constraintLeft_toLeftOf="@+id/report_rec"
+                app:layout_constraintStart_toStartOf="@+id/report_rec"
+                app:layout_constraintTop_toBottomOf="@+id/report_rec"
+                app:layout_constraintTop_toTopOf="@+id/report_rec" />
+
+            <TextView
+                android:id="@+id/report_rec_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="Dr. Shantanu Nimbalkar"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/prflphoto"
+                app:layout_constraintTop_toTopOf="@+id/prflphoto" />
+
+            <TextView
+                android:id="@+id/report_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="RT-PCR TEST"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/prflphoto"
+                app:layout_constraintLeft_toRightOf="@+id/prflphoto"
+                app:layout_constraintTop_toBottomOf="@+id/report_rec_name" />
+
+            <TextView
+                android:id="@+id/report_send_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="12PM"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/report_rec"
+                app:layout_constraintRight_toRightOf="@+id/report_rec"
+                app:layout_constraintTop_toTopOf="@+id/report_rec" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!--    order-->
+
+    <ScrollView
+        android:id="@+id/order"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/orderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <View
+                android:id="@+id/card_my_order"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/orderView" />
+
+            <TextView
+                android:id="@+id/txt_medcine_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Order Your Medicine"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/card_my_order"
+                app:layout_constraintRight_toRightOf="@+id/card_my_order"
+                app:layout_constraintTop_toTopOf="@+id/card_my_order" />
+
+            <EditText
+                android:id="@+id/inpt_select_medical"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="Select Medical Store"
+                android:padding="2dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:layout_constraintLeft_toLeftOf="@+id/card_my_order"
+                app:layout_constraintRight_toRightOf="@+id/card_my_order"
+                app:layout_constraintTop_toBottomOf="@+id/txt_medcine_order" />
+
+            <TextView
+                android:id="@+id/medicine1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="1. Paracetamol 25 Mg"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintLeft_toLeftOf="@+id/card_my_order"
+                app:layout_constraintRight_toRightOf="@+id/card_my_order"
+                app:layout_constraintTop_toBottomOf="@id/inpt_select_medical" />
+
+            <EditText
+                android:id="@+id/select_medicine"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textbox_whiteborder"
+                android:fontFamily="@font/raleway"
+                android:hint="Select Medicine"
+                android:padding="2dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:layout_constraintLeft_toLeftOf="@+id/card_my_order"
+                app:layout_constraintRight_toRightOf="@+id/card_my_order"
+                app:layout_constraintTop_toBottomOf="@+id/medicine1" />
+
+            <Button
+                android:id="@+id/send_order"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/raleway"
+                android:text="Send Order"
+                android:textAllCaps="false"
+                android:textColor="@color/base_color"
+                android:textSize="16dp"
+                app:cornerRadius="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/card_my_order"
+                app:layout_constraintLeft_toLeftOf="@id/card_my_order"
+                app:layout_constraintRight_toRightOf="@+id/card_my_order" />
+
+            <TextView
+                android:id="@+id/txt_my_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@color/base_color"
+                android:fontFamily="@font/raleway"
+                android:padding="5dp"
+                android:text="My Orders"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/card_my_order"
+                app:layout_constraintRight_toRightOf="@id/card_my_order"
+                app:layout_constraintTop_toBottomOf="@id/card_my_order" />
+
+            <View
+                android:id="@+id/ord1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/base_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_my_order" />
+
+            <ImageView
+                android:id="@+id/lab"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:src="@drawable/medical"
+                app:layout_constraintBottom_toBottomOf="@+id/ord1"
+                app:layout_constraintLeft_toLeftOf="@+id/ord1"
+                app:layout_constraintTop_toTopOf="@+id/ord1" />
+
+            <TextView
+                android:id="@+id/lab_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="Med. All In One Medical"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@+id/lab"
+                app:layout_constraintTop_toTopOf="@+id/lab" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:fontFamily="@font/raleway"
+                android:text="12AM"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lab"
+                app:layout_constraintStart_toEndOf="@+id/lab"
+                app:layout_constraintTop_toBottomOf="@+id/lab_name"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Pending"
+                android:textColor="#ff0000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ord1"
+                app:layout_constraintEnd_toEndOf="@+id/ord1"
+                app:layout_constraintTop_toBottomOf="@+id/txt_my_order" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

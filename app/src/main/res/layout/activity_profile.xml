@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/profile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="visible">
+
+            <View
+                android:id="@+id/card_personal_info"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="#40bcba"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ProfileUserPic"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white_border"
+                android:padding="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/card_personal_info"
+                app:layout_constraintStart_toStartOf="@+id/card_personal_info"
+                app:layout_constraintTop_toTopOf="@+id/card_personal_info"
+                app:srcCompat="@drawable/patient" />
+
+            <TextView
+                android:id="@+id/ProfileUserType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/raleway"
+                android:text="I'm User Type"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/ProfileUserPic"
+                app:layout_constraintStart_toStartOf="@+id/ProfileUserPic"
+                app:layout_constraintTop_toBottomOf="@+id/ProfileUserPic" />
+
+            <TextView
+                android:id="@+id/ProfileUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/raleway"
+                android:text="User Name"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/ProfileUserType"
+                app:layout_constraintRight_toRightOf="@+id/ProfileUserType"
+                app:layout_constraintTop_toBottomOf="@+id/ProfileUserType" />
+
+            <TextView
+                android:id="@+id/ProfileDoBValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:text="Date of Birth"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/ProfileUserName"
+                app:layout_constraintRight_toRightOf="@+id/ProfileUserName"
+                app:layout_constraintTop_toBottomOf="@+id/ProfileUserName" />
+
+            <TextView
+                android:id="@+id/ProfileUserGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="Gender"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/ProfileDoBValue"
+                app:layout_constraintRight_toRightOf="@+id/ProfileDoBValue"
+                app:layout_constraintTop_toBottomOf="@+id/ProfileDoBValue" />
+
+            <TextView
+                android:id="@+id/ProfileUerQuali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Qualification"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/ProfileUserGender"
+                app:layout_constraintRight_toRightOf="@+id/ProfileUserGender"
+                app:layout_constraintTop_toBottomOf="@+id/ProfileUserGender" />
+
+            <TextView
+                android:id="@+id/ProfileUerQualiDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Qualification Description"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/ProfileUerQuali"
+                app:layout_constraintRight_toRightOf="@+id/ProfileUerQuali"
+                app:layout_constraintTop_toBottomOf="@+id/ProfileUerQuali" />
+
+            <View
+                android:id="@+id/card_contact_info"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:background="#40bcba"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_personal_info">
+
+            </View>
+
+            <TextView
+                android:id="@+id/ProfileUserTxtMobile"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/raleway"
+                android:text="Mobile :"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/card_contact_info"
+                app:layout_constraintHorizontal_bias="0.08"
+                app:layout_constraintStart_toStartOf="@+id/card_contact_info"
+                app:layout_constraintTop_toTopOf="@+id/card_contact_info" />
+
+            <TextView
+                android:id="@+id/ProfileUserMobileValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="Phone Number"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ProfileUserTxtMobile"
+                app:layout_constraintLeft_toRightOf="@+id/ProfileUserTxtMobile"
+                app:layout_constraintTop_toTopOf="@+id/ProfileUserTxtMobile" />
+
+            <TextView
+                android:id="@+id/ProfileUserTxtEmail"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/raleway"
+                android:text="E-mail :"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.204"
+                app:layout_constraintLeft_toLeftOf="@+id/ProfileUserTxtMobile"
+                app:layout_constraintRight_toRightOf="@+id/ProfileUserTxtMobile"
+                app:layout_constraintTop_toBottomOf="@+id/ProfileUserMobileValue" />
+
+            <TextView
+                android:id="@+id/ProfileUserEmailValue"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/raleway"
+                android:text="Email address"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ProfileUserTxtEmail"
+                app:layout_constraintLeft_toRightOf="@+id/ProfileUserTxtEmail"
+                app:layout_constraintTop_toTopOf="@+id/ProfileUserTxtEmail" />
+
+            <View
+                android:id="@+id/card_address_info"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="5dp"
+                android:background="#40bcba"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_contact_info">
+
+            </View>
+
+            <TextView
+                android:id="@+id/ProfileUserAddL1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:text="Address Line No 1"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/card_address_info"
+                app:layout_constraintStart_toStartOf="@+id/card_address_info"
+                app:layout_constraintTop_toTopOf="@+id/card_address_info" />
+
+            <TextView
+                android:id="@+id/ProfileUserAddL2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:text="Address Line No 2"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/ProfileUserAddL1"
+                app:layout_constraintRight_toRightOf="@+id/ProfileUserAddL1"
+                app:layout_constraintTop_toBottomOf="@+id/ProfileUserAddL1" />
+
+            <TextView
+                android:id="@+id/ProfileUserCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="City"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/ProfileUserAddL2"
+                app:layout_constraintTop_toBottomOf="@+id/ProfileUserAddL2" />
+
+            <TextView
+                android:id="@+id/ProfileUserDistrict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="District"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintRight_toRightOf="@+id/ProfileUserAddL2"
+                app:layout_constraintTop_toBottomOf="@+id/ProfileUserAddL2" />
+
+            <TextView
+                android:id="@+id/ProfileUserState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="State"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/ProfileUserCity"
+                app:layout_constraintTop_toBottomOf="@+id/ProfileUserCity" />
+
+            <TextView
+                android:id="@+id/ProfileUserPincode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="PinCode"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/ProfileUserDistrict"
+                app:layout_constraintTop_toBottomOf="@+id/ProfileUserDistrict" />
+
+            <Button
+                android:id="@+id/btnGoToDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:text="Go To Dashboard"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_address_info" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="0dp"
+                app:layout_constraintEnd_toEndOf="@+id/btnGoToDashboard"
+                app:layout_constraintStart_toStartOf="@+id/btnGoToDashboard"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToDashboard" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
